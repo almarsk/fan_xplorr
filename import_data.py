@@ -15,6 +15,7 @@ links = {"A-B": "http://w3.usf.edu/FreeAssociation/AppendixB/A-B.TargetsCues",
 
 data = dict()
 
+
 for index, link in links.items():
     data[index] = requests.get(link)
 
