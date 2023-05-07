@@ -22,9 +22,7 @@ with open("data/raw_florida_free_association_norms.txt", "r") as data:
         for association in associations:
             fin_data[header[1].strip()][association[0].strip()] = []
             for value in association[1:]:
-                fin_data[header[1].strip()][association[0].strip()].append(value.strip())
+                fin_data[header[1].strip()][association[0].strip()].append(float(value.strip()))
 
     with open("data/UCLFAN.json", "w") as destination:
         json.dump(fin_data, destination)
-
-
