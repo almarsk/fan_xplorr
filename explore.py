@@ -27,6 +27,7 @@ def make_graph(selection, hub):
     net = Network(notebook=True, cdn_resources='in_line')
     add_nodes(net, selection)
     add_edges()
+
     hub_or_cue = lambda b: "hub" if b else "cue"
     net.repulsion(node_distance=100, spring_length=200)
     return net.show(f'graphs/{filename()}_{hub_or_cue(hub)}.html')
@@ -35,7 +36,7 @@ def make_graph(selection, hub):
 def new_graph(*selection):
     selection = make_selection(selection)
     make_graph(selection, hub=True)
-    make_graph(selection, hub=False)
+    # make_graph(selection, hub=False)
 
 
 def filename(new_name=""):
@@ -47,7 +48,8 @@ def filename(new_name=""):
     with open("config.json", "w") as j:
         json.dump(config, j)
 
-        return f"current filename is {config['filename']}"
+        print("current filename:")
+        return config['filename']
 
 
 if __name__ == '__main__':
