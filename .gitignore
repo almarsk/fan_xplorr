@@ -2,6 +2,9 @@
 .DS_Store
 .venv
 pyrightconfig.json
+graphs/nodes_cue.html
+graphs/nodes_hub.html
+
 
 
 

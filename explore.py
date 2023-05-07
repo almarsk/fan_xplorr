@@ -1,9 +1,8 @@
 import fire
+import json
 from pyvis.network import Network
 from utils import make_selection
 from make_nodes import make_nodes
-
-destination_filename = "nodes"
 
 
 def add_nodes(net, selection):
@@ -15,7 +14,6 @@ def add_nodes(net, selection):
                      color=input_nodes[name]["color"],
                      size=5,
                      shape=input_nodes[name]["shape"]),
-
         x += 1
 
 
@@ -23,7 +21,7 @@ def add_edges():
     print("add edges")
 
 
-def make_graph(selection, hub=True):
+def make_graph(selection, hub):
     make_nodes(selection)
     # set up a network graph
     net = Network(notebook=True, cdn_resources='in_line')
@@ -31,7 +29,7 @@ def make_graph(selection, hub=True):
     add_edges()
     hub_or_cue = lambda b: "hub" if b else "cue"
     net.repulsion(node_distance=100, spring_length=200)
-    return net.show(f'graphs/{destination_filename}_{hub_or_cue(hub)}.html')
+    return net.show(f'graphs/{filename()}_{hub_or_cue(hub)}.html')
 
 
 def new_graph(*selection):
@@ -40,17 +38,21 @@ def new_graph(*selection):
     make_graph(selection, hub=False)
 
 
-def config_filename(name):
-    global destination_filename
-    if name is not None:
-        destination_filename = name
+def filename(new_name=""):
 
-    return f"current destination filename is {destination_filename}"
+    with open("config.json", "r") as j:
+        config = json.load(j)
+        config["filename"] = new_name or config["filename"]
+
+    with open("config.json", "w") as j:
+        json.dump(config, j)
+
+        return f"current filename is {config['filename']}"
 
 
 if __name__ == '__main__':
     fire.Fire({
         "new": new_graph,
-        "name": config_filename,
+        "name": filename,
     })
 
