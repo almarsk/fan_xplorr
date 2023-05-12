@@ -34,6 +34,9 @@ Function 'make' creates a network graph in the 'graphs' directory:
 
         Follow the command up by words you want
         to be a part of the graph seperated by space.
+
+        To change the name of desination file,
+        run the 'name' function
 __________________________________________________________________
 """
     selection = utils.make_selection(selection)
