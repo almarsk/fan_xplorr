@@ -2,7 +2,7 @@ instalation steps:
 
 1) get the repository
 ```sh
-git clone https://github.com/almarsk/UCLFAN.git
+git clone https://github.com/almarsk/USFFAN.git
 ```
 2) create a virtual environment
 ```sh
