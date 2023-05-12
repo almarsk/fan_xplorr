@@ -1,4 +1,4 @@
-instalation steps:
+Installation:
 
 get the repository
 ```sh
