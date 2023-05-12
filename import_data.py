@@ -1,7 +1,10 @@
 import requests
 import json
+import os
 
-with open('data/florida_free_association_norms.txt', 'w') as f:
+os.mkdir("data")
+
+with open('data/raw_florida_free_association_norms.txt', 'w') as f:
     f.write("")
 
 links = {"A-B": "http://w3.usf.edu/FreeAssociation/AppendixB/A-B.TargetsCues",
@@ -22,5 +25,5 @@ for index, link in links.items():
 for chunk in data:
     json_string = json.dumps(data[chunk].text)
 
-    with open('data/florida_free_association_norms.txt', 'a+') as f:
+    with open('data/raw_florida_free_association_norms.txt', 'a+') as f:
         f.write(json_string)
