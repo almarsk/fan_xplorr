@@ -19,7 +19,7 @@ def unpack_data():
 
 def get_edges(input_nodes, data):
     for key, item in input_nodes.items():
-        print(item)
+        #print(item)
         """# set up edges main
         edges = []
         for index_item, item in enumerate(names):
@@ -74,8 +74,7 @@ def add_nodes(net, selection, data):
         )
         x += 1
 
-
-    print(input_nodes)
+    # TODO finish get_edges
     # net.add_edges(get_edges(input_nodes, data))
 
 

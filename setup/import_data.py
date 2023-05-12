@@ -2,7 +2,8 @@ import requests
 import json
 import os
 
-os.mkdir("data")
+if not os.path.exists("data"):
+    os.mkdir("data")
 
 with open('data/raw_florida_free_association_norms.txt', 'w') as f:
     f.write("")

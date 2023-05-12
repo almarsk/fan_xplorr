@@ -1,5 +1,6 @@
 venv
 graphs/nodes_cue.html
 graphs/nodes_hub.html
+graphs
 data
 .DS_Store
