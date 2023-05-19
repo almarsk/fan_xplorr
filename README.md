@@ -22,17 +22,17 @@ venv\Scripts\activate
 ```
 update pip
 ```sh
-venv/bin/pip install -U pip
+pip install -U pip
 ```
 install packages
 ```sh
-venv/bin/pip install -r setup/requirements.txt
+pip install -r setup/requirements.txt
 ```
 import and process data, print hint
 ```sh
-venv/bin/python setup/setup.py
+python setup/setup.py
 ```
 start exploring
 ```sh
-venv/bin/python explore.py make word of your choice
+python explore.py make word of your choice
 ```
