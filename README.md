@@ -12,6 +12,14 @@ create a virtual environment
 ```sh
 python3 -m venv venv
 ```
+activate virtual environment on mac
+```sh
+source venv/bin/activate
+```
+OR on windows
+```sh
+venv\Scripts\activate
+```
 update pip
 ```sh
 venv/bin/pip install -U pip
