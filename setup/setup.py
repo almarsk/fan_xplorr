@@ -8,12 +8,12 @@ subprocess.run(["python", "setup/process_data_just_words.py"]).returncode == 0:
 
     This is the command you want to run now:
 
-    venv/bin/python explore.py make word of your choice
+    python explore.py make word of your choice
 
     You'll find the graphs in the "graphs" directory (it will be created with your first graph)
     If you want to change the name of the file you save your graph into, use this command:
 
-    venv/bin/python explore.py name name_of_your_choice
+    python explore.py name name_of_your_choice
 
     have fun :)
 
