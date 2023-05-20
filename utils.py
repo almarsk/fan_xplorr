@@ -8,6 +8,13 @@ def rand_color():
     return ['hsl(' + rc + ', 100%, 60%)', 'hsl(' + rc + ', 50%, 75%)']
 
 
+def hub_colors(selection):
+    colors = []
+    for word in selection:
+        colors.append(rand_color())
+    return colors
+
+
 def make_selection(selection):
     return [word.upper() for word in selection]
 
@@ -86,14 +93,14 @@ def make_nodes_c(selection, data, colors, hub=True):
         for node2 in data:
             if node in data[node2]:
                 input_nodes[node]["cues"].append(node2)
-
-                input_nodes[node2] = dict()
-                input_nodes[node2]['id'] = id_count
-                id_count += 1
-                input_nodes[node2]["name"] = node2
-                input_nodes[node2]["prio"] = "cue"
-                input_nodes[node2]["shape"] = "dot"
-                input_nodes[node2]["color"] = colors[colors_count][0]
+                if node2 not in selection:
+                    input_nodes[node2] = dict()
+                    input_nodes[node2]['id'] = id_count
+                    id_count += 1
+                    input_nodes[node2]["name"] = node2
+                    input_nodes[node2]["prio"] = "cue"
+                    input_nodes[node2]["shape"] = "dot"
+                    input_nodes[node2]["color"] = colors[colors_count][0]
         colors_count += 1
         # pprint.pp(input_nodes)
     return input_nodes
@@ -137,9 +144,3 @@ def combine_html_files(file1, file2, output_file):
         outfile.write('</div>\n')
 
         outfile.write('</body>\n</html>')
-
-def hub_colors(selection):
-    colors = []
-    for word in selection:
-        colors.append(rand_color())
-    return colors
