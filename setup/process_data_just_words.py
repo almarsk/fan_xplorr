@@ -23,5 +23,5 @@ with open("data/raw_florida_free_association_norms.txt", "r") as data:
             fin_data[header[1].strip()].append(association[0].strip())
 
 
-    with open("data/UCLFAN_just_words.json", "w") as destination:
+    with open("data/USFFAN_just_words.json", "w") as destination:
         json.dump(fin_data, destination)

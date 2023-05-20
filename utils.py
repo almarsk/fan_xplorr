@@ -1,6 +1,5 @@
 import random
 import json
-from typing_extensions import Counter
 import pprint
 
 
@@ -14,7 +13,7 @@ def make_selection(selection):
 
 
 def unpack_data():
-    with open("data/UCLFAN_just_words.json", "r") as raw_data:
+    with open("data/USFFAN_just_words.json", "r") as raw_data:
         data = json.load(raw_data)
     return data
 
@@ -34,18 +33,19 @@ def get_edges(input_nodes, data):
     return edges
 
 
-def make_nodes_h(selection, data, hub=True):
+def make_nodes_h(selection, data, colors, hub=True):
     input_nodes = {}
     id_count = 1
+    colors_count = 0
     for node in selection:
-        color = rand_color()
+        # color = rand_color()
         input_nodes[node] = dict()
         input_nodes[node]['id'] = id_count
         id_count += 1
         input_nodes[node]["name"] = node
         input_nodes[node]["prio"] = "main"
         input_nodes[node]["shape"] = "dot"
-        input_nodes[node]["color"] = color[0]
+        input_nodes[node]["color"] = colors[colors_count][0]
 
         if node in data:
             cues = data[node]
@@ -54,31 +54,33 @@ def make_nodes_h(selection, data, hub=True):
             cues = []
             input_nodes[node]["cues"] = []
 
-            for cue in cues:
-                if cue not in input_nodes:
-                    input_nodes[cue] = dict()
-                    input_nodes[cue]['id'] = id_count
-                    id_count += 1
-                    input_nodes[cue]["name"] = cue
-                    input_nodes[cue]["prio"] = "cue"
-                    input_nodes[cue]["shape"] = "dot"
-                    input_nodes[cue]["color"] = color[1]
+        for cue in cues:
+            if cue not in input_nodes:
+                input_nodes[cue] = dict()
+                input_nodes[cue]['id'] = id_count
+                id_count += 1
+                input_nodes[cue]["name"] = cue
+                input_nodes[cue]["prio"] = "cue"
+                input_nodes[cue]["shape"] = "dot"
+                input_nodes[cue]["color"] = colors[colors_count][1]
+        colors_count += 1
 
     return input_nodes
 
 
-def make_nodes_c(selection, data, hub=True):
+def make_nodes_c(selection, data, colors, hub=True):
     input_nodes = {}
     id_count = 1
+    colors_count = 0
     for node in selection:
-        color = rand_color()
+        # color = rand_color()
         input_nodes[node] = dict()
         input_nodes[node]['id'] = id_count
         id_count += 1
         input_nodes[node]["name"] = node
         input_nodes[node]["prio"] = "main"
         input_nodes[node]["shape"] = "dot"
-        input_nodes[node]["color"] = color[0]
+        input_nodes[node]["color"] = colors[colors_count][0]
         input_nodes[node]["cues"] = list()
 
         for node2 in data:
@@ -91,8 +93,9 @@ def make_nodes_c(selection, data, hub=True):
                 input_nodes[node2]["name"] = node2
                 input_nodes[node2]["prio"] = "cue"
                 input_nodes[node2]["shape"] = "dot"
-                input_nodes[node2]["color"] = color[1]
-        # # pprint.pp(input_nodes)
+                input_nodes[node2]["color"] = colors[colors_count][0]
+        colors_count += 1
+        # pprint.pp(input_nodes)
     return input_nodes
 
 
@@ -134,3 +137,9 @@ def combine_html_files(file1, file2, output_file):
         outfile.write('</div>\n')
 
         outfile.write('</body>\n</html>')
+
+def hub_colors(selection):
+    colors = []
+    for word in selection:
+        colors.append(rand_color())
+    return colors

@@ -45,8 +45,9 @@ __________________________________________________________________
         os.makedirs("graphs")
     file = filename()
     data = utils.unpack_data()
-    make_graph(utils.make_nodes_h(selection, data), file, data, hub=True)
-    make_graph(utils.make_nodes_c(selection, data, hub=False), file, data, hub=False)
+    colors = utils.hub_colors(selection)
+    make_graph(utils.make_nodes_h(selection, data, colors), file, data, hub=True)
+    make_graph(utils.make_nodes_c(selection, data, colors, hub=False), file, data, hub=False)
     utils.combine_html_files(f"{file}_hub.html",f"{file}_cue.html", f"{file}_both.html")
 
 
