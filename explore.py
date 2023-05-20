@@ -5,15 +5,12 @@ import utils
 import os
 
 
-def make_graph(selection, hub):
-    data = utils.unpack_data()
+def make_graph(selection, file, data, hub):
     net = Network(notebook=True, cdn_resources='in_line')
     utils.add_nodes(net, selection, data)
     net.repulsion(node_distance=100, spring_length=200)
     hub_or_cue = lambda b: "hub" if b else "cue"
-    if not os.path.exists("graphs"):
-        os.makedirs("graphs")
-    return net.show(f'graphs/{filename()}_{hub_or_cue(hub)}.html')
+    return net.show(f'graphs/{file}_{hub_or_cue(hub)}.html')
 
 
 def filename(new_name=""):
@@ -24,13 +21,13 @@ def filename(new_name=""):
         j.seek(0)
         j.truncate(0)
         json.dump(config, j)
-        print("\nTo change the destination filename, follow up this command with the desired name.")
-        print("Current filename:")
+        print("\nTo change the destination filename, follow up command `name` with the desired name.")
+        print("Current filenames:")
         return config['filename']
 
 
 def new_graph(*selection):
-    """makes a new graph, try python explore.py make"""
+    """makes a new graph, try python explore.py make play"""
     if len(selection) == 0:
         return """__________________________________________________________________
 Function 'make' creates a network graph in the 'graphs' directory:
@@ -44,8 +41,13 @@ Function 'make' creates a network graph in the 'graphs' directory:
 __________________________________________________________________
 """
     selection = utils.make_selection(selection)
-    make_graph(selection, hub=True)
-    # make_graph(selection, hub=False)
+    if not os.path.exists("graphs"):
+        os.makedirs("graphs")
+    file = filename()
+    data = utils.unpack_data()
+    make_graph(utils.make_nodes_h(selection, data), file, data, hub=True)
+    make_graph(utils.make_nodes_c(selection, data, hub=False), file, data, hub=False)
+    utils.combine_html_files(f"{file}_hub.html",f"{file}_cue.html", f"{file}_both.html")
 
 
 if __name__ == '__main__':
