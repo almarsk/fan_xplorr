@@ -47,12 +47,10 @@ def make_nodes_h(selection, data, colors, hub=True):
     for node in selection:
         # color = rand_color()
         input_nodes[node] = dict()
-        input_nodes[node]['id'] = id_count
-        id_count += 1
+        input_nodes[node]["color"] = colors[colors_count][0]
         input_nodes[node]["name"] = node
         input_nodes[node]["prio"] = "main"
         input_nodes[node]["shape"] = "dot"
-        input_nodes[node]["color"] = colors[colors_count][0]
 
         if node in data:
             cues = data[node]
@@ -72,6 +70,11 @@ def make_nodes_h(selection, data, colors, hub=True):
                 input_nodes[cue]["color"] = colors[colors_count][1]
         colors_count += 1
 
+        # hub id is added as last so it is added as last to edges
+        # all edges going out of hub should have hubs color
+        input_nodes[node]['id'] = id_count
+        id_count += 1
+
     return input_nodes
 
 
@@ -82,8 +85,6 @@ def make_nodes_c(selection, data, colors, hub=True):
     for node in selection:
         # color = rand_color()
         input_nodes[node] = dict()
-        input_nodes[node]['id'] = id_count
-        id_count += 1
         input_nodes[node]["name"] = node
         input_nodes[node]["prio"] = "main"
         input_nodes[node]["shape"] = "dot"
@@ -100,9 +101,13 @@ def make_nodes_c(selection, data, colors, hub=True):
                     input_nodes[node2]["name"] = node2
                     input_nodes[node2]["prio"] = "cue"
                     input_nodes[node2]["shape"] = "dot"
-                    input_nodes[node2]["color"] = colors[colors_count][0]
+                    input_nodes[node2]["color"] = colors[colors_count][1]
         colors_count += 1
+
         # pprint.pp(input_nodes)
+        input_nodes[node]['id'] = id_count
+        id_count += 1
+
     return input_nodes
 
 
@@ -119,6 +124,7 @@ def add_nodes(net, input_nodes, data):
                         size= map_values(value, 1, 324, 5, 60),
                         shape=input_nodes[name]["shape"]
         )
+
     net.add_edges(get_edges(input_nodes, data))
 
 
@@ -127,7 +133,8 @@ def map_values(value, in_min, in_max, out_min, out_max):
 
 
 def combine_html_files(file1, file2, output_file):
-    with open(f"graphs/{output_file}", 'w') as outfile:
+    dest = f"graphs/{output_file}"
+    with open(dest, 'w') as outfile:
         outfile.write('<html>\n<head>\n<style>\n')
         outfile.write('body { display: flex; margin: 0 }\n')
         outfile.write('iframe { flex: 1; border: none; }\n')
@@ -144,3 +151,4 @@ def combine_html_files(file1, file2, output_file):
         outfile.write('</div>\n')
 
         outfile.write('</body>\n</html>')
+        print(dest)

@@ -11,7 +11,9 @@ def make_graph(selection, file, data, hub):
     net.repulsion(node_distance=100, spring_length=200)
     hub_or_cue = lambda b: "hub" if b else "cue"
     html = net.generate_html()
-    with open(f'graphs/{file}_{hub_or_cue(hub)}.html', mode='w', encoding='utf-8') as fp:
+    dest = f'graphs/{file}_{hub_or_cue(hub)}.html'
+    print(dest)
+    with open(dest, mode='w', encoding='utf-8') as fp:
             fp.write(html)
 
 
