@@ -10,7 +10,9 @@ def make_graph(selection, file, data, hub):
     utils.add_nodes(net, selection, data)
     net.repulsion(node_distance=100, spring_length=200)
     hub_or_cue = lambda b: "hub" if b else "cue"
-    return net.show(f'graphs/{file}_{hub_or_cue(hub)}.html')
+    html = net.generate_html()
+    with open(f'graphs/{file}_{hub_or_cue(hub)}.html', mode='w', encoding='utf-8') as fp:
+            fp.write(html)
 
 
 def filename(new_name=""):
