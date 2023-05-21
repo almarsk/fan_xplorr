@@ -12,7 +12,7 @@ create a virtual environment
 ```sh
 python3 -m venv venv
 ```
-WINDOWS:
+WINDOWS:<br><br>
 activate virtual environment
 ```sh
 venv\Scripts\activate
@@ -33,7 +33,7 @@ setx PYTHONPATH "path\to\working\directory\venv\Lib\site-packages"
 ```sh
 pip show requests
 ```
-for example)
+for example)<br>
 
 import and process data, print hint
 ```sh
@@ -44,8 +44,7 @@ start exploring
 python explore.py make word of your choice
 ```
 
-
-MACOS:
+MACOS:<br><br>
 activate virtual environment
 ```sh
 source venv/bin/activate
