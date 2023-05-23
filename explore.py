@@ -8,7 +8,7 @@ import os
 def make_graph(selection, file, data, hub):
     net = Network(notebook=True, cdn_resources='in_line')
     utils.add_nodes(net, selection, data)
-    net.repulsion(node_distance=250, spring_length=200)
+    net.repulsion(node_distance=150, spring_length=200)
     hub_or_cue = lambda b: "hub" if b else "cue"
     html = net.generate_html()
     dest = f'graphs/{file}_{hub_or_cue(hub)}.html'
