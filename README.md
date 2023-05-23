@@ -1,4 +1,12 @@
+Citation:
+
 Nelson, D. L., McEvoy, C. L., & Schreiber, T. A. (1998). The University of South Florida word association, rhyme, and word fragment norms. [http://www.usf.edu/FreeAssociation/](http://w3.usf.edu/FreeAssociation/)
+
+Description:
+
+This CLI tool creates html files of interactive network data graphs. Graphs are made using Pyvis. Network data come from USF free association norms.
+
+Example:
 
 
 Installation:
@@ -47,7 +55,7 @@ start exploring
 python explore.py make word of your choice
 ```
 
-MACOS:<br><br>
+MACOS/LINUX:<br><br>
 activate virtual environment
 ```sh
 source venv/bin/activate
