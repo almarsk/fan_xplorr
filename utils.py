@@ -111,7 +111,6 @@ def make_nodes_c(selection, data, colors, hub=True):
     return input_nodes
 
 
-
 def add_nodes(net, input_nodes, data):
     value = 5
     for name in input_nodes:
@@ -121,10 +120,9 @@ def add_nodes(net, input_nodes, data):
         net.add_node(input_nodes[name]['id'],
                         label=name,
                         color=input_nodes[name]["color"],
-                        size= map_values(value, 1, 324, 5, 60),
+                        size= map_values(value, 1, 324, 5, 45),
                         shape=input_nodes[name]["shape"]
         )
-
     net.add_edges(get_edges(input_nodes, data))
 
 
