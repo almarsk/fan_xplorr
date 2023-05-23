@@ -140,9 +140,9 @@ def combine_html_files(file1, file2, output_file):
         outfile.write('iframe { flex: 1; border: none; }\n')
         outfile.write('</style>\n</head>\n<body>\n')
 
-        outfile.write('<div style="display: flexbox; width: 50%; height: 100%; box-sizing: border-box;">\n')
+        outfile.write('<div style="display: flexbox; width: 50%; height: 100vh; box-sizing: border-box;">\n')
         outfile.write('<p>chosen words as hubs:')
-        outfile.write(f'<iframe src="{file1}" style="width: 100%; height: 100%; border: none;"></iframe>\n')
+        outfile.write(f'<iframe src="{file1}" style="width: 100%; height: 100vh; border: none;"></iframe>\n')
         outfile.write('</div>\n')
 
         outfile.write('<div style="display: inline-block; width: 50%; height: 100%; box-sizing: border-box;">\n')
