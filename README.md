@@ -54,7 +54,7 @@ python setup/setup.py
 ```
 start exploring
 ```sh
-python explore.py make word of your choice
+python xplor.py make word of your choice
 ```
 
 MACOS/LINUX:<br><br>
@@ -76,5 +76,5 @@ python setup/setup.py
 ```
 start exploring
 ```sh
-python explore.py make word of your choice
+python xplor.py make word of your choice
 ```
