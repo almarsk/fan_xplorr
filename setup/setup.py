@@ -13,7 +13,7 @@ subprocess.run(["python", "setup/process_data_just_words.py"]).returncode == 0:
     You'll find the graphs in the "graphs" directory (it will be created with your first graph)
     If you want to change the name of the file you save your graph into, use this command:
 
-    python explore.py name name_of_your_choice
+    python xplor.py name name_of_your_choice
 
     have fun :)
 
