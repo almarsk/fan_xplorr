@@ -8,18 +8,18 @@ This CLI tool creates html files of interactive network data graphs. Graphs are 
 
 Example:
 
-![example graph with cactus thorn and prick as cues](https://raw.githubusercontent.com/almarsk/USFFAN/main/example.png)
+![example graph with cactus thorn and prick as cues]([https://raw.githubusercontent.com/almarsk/fan_xplorr/main/example.png])
 
 
 Installation:
 
 get the repository
 ```sh
-git clone https://github.com/almarsk/USFFAN.git
+git clone https://github.com/almarsk/fan_xplorr.git
 ```
 go into your directory
 ```sh
-cd USFFAN
+cd fan_xplorr
 ```
 create a virtual environment
 ```sh
@@ -88,7 +88,7 @@ deactivate
 TO RUN AGAIN LATER:<br><br>
 WINDOWS:<br><br>
 ```sh
-cd path\to\USFFAN_explorer
+cd path\to\fan_xplorr
 ```
 activate virtual environment
 ```sh
@@ -100,7 +100,7 @@ python xplor.py make word of your choice
 ```
 MACOS/LINUX:<br><br>
 ```sh
-cd path/to/USFFAN_explorer
+cd path/to/fan_xplorr
 ```
 activate virtual environment
 ```sh
