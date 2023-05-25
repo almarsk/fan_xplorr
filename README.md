@@ -78,3 +78,29 @@ start exploring
 ```sh
 python xplor.py make word of your choice
 ```
+
+TO RUN:
+WINDOWS:<br><br>
+```sh
+cd path\to\USFFAN_explorer
+```
+activate virtual environment
+```sh
+venv\Scripts\activate
+```
+start exploring
+```sh
+python xplor.py make word of your choice
+```
+MACOS/LINUX:<br><br>
+```sh
+cd path/to/USFFAN_explorer
+```
+activate virtual environment
+```sh
+source venv/bin/activate
+```
+start exploring
+```sh
+python xplor.py make word of your choice
+```
