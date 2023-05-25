@@ -79,7 +79,13 @@ start exploring
 python xplor.py make word of your choice
 ```
 
-TO RUN:<br><br>
+WHEN YOU'RE DONE:<br><br>
+deactivate virtual environment
+```sh
+deactivate
+```
+
+TO RUN AGAIN LATER:<br><br>
 WINDOWS:<br><br>
 ```sh
 cd path\to\USFFAN_explorer
