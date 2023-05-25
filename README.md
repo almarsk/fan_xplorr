@@ -8,7 +8,7 @@ This CLI tool creates html files of interactive network data graphs. Graphs are 
 
 Example:
 
-![example graph with cactus thorn and prick as cues]([https://raw.githubusercontent.com/almarsk/fan_xplorr/main/example.png])
+![example graph with cactus thorn and prick as cues](https://raw.githubusercontent.com/almarsk/fan_xplorr/main/example.png)
 
 
 Installation:
