@@ -15,7 +15,7 @@ subprocess.run(["python", "setup/process_data_just_words.py"]).returncode == 0:
 
     python xplor.py name name_of_your_choice
 
-    have fun :)
+    have fan :)
 
     """)
 
