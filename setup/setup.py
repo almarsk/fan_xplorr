@@ -4,7 +4,7 @@ if subprocess.run(["python", "setup/import_data.py"]).returncode == 0 and \
 subprocess.run(["python", "setup/process_data_just_words.py"]).returncode == 0:
     print("""
 
-    Welcome to USF Free associations network explorer!
+    Welcome to USF Free associations network explorer aka fan_xplorr!
 
     This is the command you want to run now:
 
