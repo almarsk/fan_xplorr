@@ -79,7 +79,7 @@ start exploring
 python xplor.py make word of your choice
 ```
 
-TO RUN:
+TO RUN:<br><br>
 WINDOWS:<br><br>
 ```sh
 cd path\to\USFFAN_explorer
