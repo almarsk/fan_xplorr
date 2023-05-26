@@ -1,0 +1,70 @@
+{
+  "steps": [
+    {
+      "command": [
+        "chmod",
+        "+x",
+        "name"
+      ],
+      "error": "the script name didn't get necessary permission"
+    },
+    {
+      "command": [
+        "chmod",
+        "+x",
+        "xplor"
+      ],
+      "error": "the script xplor didn't get necessary permission"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "venv",
+        "venv"
+      ],
+      "error": "virtual environment initialization failed"
+    },
+    {
+      "command": [
+        "venv/bin/pip",
+        "install",
+        "-U",
+        "pip"
+      ],
+      "error": "updating pip failed"
+    },
+    {
+      "command": [
+        "venv/bin/pip",
+        "install",
+        "-r",
+        "setup/requirements.txt"
+      ],
+      "error": "downloading packages failed"
+    },
+    {
+      "command": [
+        "venv/bin/python",
+        "setup/import_data.py"
+      ],
+      "error": "downloading data failed"
+    },
+    {
+      "command": [
+        "venv/bin/python",
+        "setup/process_data_just_words.py"
+      ],
+      "error": "processing data failed"
+    },
+    {
+      "command": [
+        "rm",
+        "wizard.py"
+      ],
+      "error": "processing data failed"
+    }
+  ],
+  "success": "\n\n____________\nWelcome to USF Free associations network explorer aka fan_xplorr!\n\nThis is the command you want to run now:\n\n.xplor word of your choice\n\nYou'll find the graphs in the 'graphs' directory (it will be created with your first graph)\nIf you want to change the name of the file you save your graph into, use this command:\n\n./rename name_of_your_choice\n\nhave fan :)\n",
+  "error": "consult documentation, try manual installation or start issue on https://github.com/almarsk/fan_xplorr"
+}
