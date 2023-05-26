@@ -7,6 +7,12 @@ if [ ! "config.json" ]; then
     exit 1
 fi
 
+if [ ! -d "venv" ]; then
+    echo "Error: Virtual environment 'venv' not found.
+       Run 'python3 wizard.py'"
+    exit 1
+fi
+
 source venv/bin/activate
 
 args_string=""

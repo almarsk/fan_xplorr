@@ -2,6 +2,7 @@ import subprocess
 import platform
 import json
 import sys
+import os
 
 def stop_auto_setup(err, gen_err):
     print("***",err,"***")
@@ -18,8 +19,11 @@ if platform.system() != 'Darwin' and platform.system() != 'Linux':
 # installation steps loop based on setup/setup_steps.json
 for step in installation["steps"]:
 
-    command = step["command"] # .get(platform, step["command"])
+    command = step["command"]
     if subprocess.run(command).returncode != 0:
         stop_auto_setup(step["error"], installation["error"])
 
 print(installation["success"])
+
+os.remove("example.png")
+os.remove(__file__)
