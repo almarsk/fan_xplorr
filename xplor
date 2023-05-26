@@ -13,6 +13,6 @@ for arg in "$@"; do
     args_string+=" $arg"
 done
 
-python explore.py make $args_string
+python src/explore.py make $args_string
 
 deactivate

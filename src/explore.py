@@ -25,7 +25,7 @@ def filename(new_name=""):
         j.seek(0)
         j.truncate(0)
         json.dump(config, j)
-        print("\nTo change the destination filename, follow up command `name` with the desired name.")
+        print("To change the destination filename, run '.rnm desired_name'.")
         print("Current filenames:")
         return config['filename']
 
@@ -33,16 +33,12 @@ def filename(new_name=""):
 def new_graph(*selection):
     """makes a new graph, try python explore.py make play"""
     if len(selection) == 0:
-        return """__________________________________________________________________
-Function 'make' creates a network graph in the 'graphs' directory:
-
-        Follow the command up by words you want
-        to be a part of the graph.
-        They just need to be seperated by space.
-
-        To change the name of desination file,
-        run the 'name' function
-__________________________________________________________________
+        return """       __________________________________________________________________
+     ||./xplor creates a network graph in the 'graphs' directory:        ||
+     ||Follow the command up by words you want to be a part of the graph.||
+     ||They just need to be seperated by space.                          ||
+     ||To change the name of desination file, run ./rnm                  ||
+      __________________________________________________________________
 """
     selection = utils.make_selection(selection)
     if not os.path.exists("graphs"):
