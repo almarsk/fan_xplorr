@@ -14,7 +14,7 @@
         "cmd",
         "/c",
         "move",
-        "setup\\xplor_w.py",
+        "src\\xplor_w.py",
         "xplor"
       ],
       "error": ""
@@ -33,7 +33,7 @@
         "cmd",
         "/c",
         "move",
-        "setup\\rnm_w.py",
+        "src\\rnm_w.py",
         "rnm"
       ],
       "error": ""
