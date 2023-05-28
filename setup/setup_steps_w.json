@@ -2,24 +2,6 @@
   "steps": [
     {
       "command": [
-        "icacls",
-        "rnm",
-        "/grant",
-        "username:(RX)"
-      ],
-      "error": "the script name didn't get necessary permission"
-    },
-    {
-      "command": [
-        "icacls",
-        "xplor",
-        "/grant",
-        "username:(RX)"
-      ],
-      "error": "the script xplor didn't get necessary permission"
-    },
-    {
-      "command": [
         "python3",
         "-m",
         "venv",
@@ -84,6 +66,6 @@
       "error": "processing data failed"
     }
   ],
-  "success": "\n\n____________\nWelcome to USF Free associations network explorer aka fan_xplorr!\n\nThis is the command you want to run now:\n\n./xplor words of your choice\n\nYou'll find the graphs in the 'graphs' directory (it will be created with your first graph)\nIf you want to change the name of the file you save your graph into, use this command:\n\n./rnm name_of_your_choice\n\nhave fan :)\n",
+  "success": "\n\n____________\nWelcome to USF Free associations network explorer aka fan_xplorr!\n\nThis is the command you want to run now:\n\npython xplor words of your choice\n\nYou'll find the graphs in the 'graphs' directory (it will be created with your first graph)\nIf you want to change the name of the file you save your graph into, use this command:\n\npython rnm name_of_your_choice\n\nhave fan :)\n",
   "error": "consult documentation, try manual installation or start issue on https://github.com/almarsk/fan_xplorr"
 }

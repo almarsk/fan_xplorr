@@ -15,8 +15,10 @@ inst_type = ""
 
 if sys.platform.startswith('win'):
     inst_type = "_w"
+
 elif platform.system() != 'Darwin' and platform.system() != 'Linux':
     stop_auto_setup("this autosetup only works on mac os and linux and windows", "consult documentation for manual installation")
+
 with open(f"setup/setup_steps{inst_type}.json", "r") as i:
     installation = json.load(i)
 
@@ -29,5 +31,5 @@ for step in installation["steps"]:
 
 print(installation["success"])
 
-os.remove("example.png")
-os.remove(__file__)
+#os.remove("example.png")
+#os.remove(__file__)
