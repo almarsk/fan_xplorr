@@ -24,11 +24,11 @@ with open(f"setup/setup_steps{inst_type}.json", "r") as i:
 # installation steps loop based on setup/setup_steps.json
 for step in installation["steps"]:
     command = step["command"]
-    print(" ".join(command))
+    # print(" ".join(command))
     if subprocess.run(command).returncode != 0:
         stop_auto_setup(step["error"], installation["error"])
 
 print(installation["success"])
 
-#os.remove("example.png")
-#os.remove(__file__)
+os.remove("example.png")
+os.remove(__file__)
