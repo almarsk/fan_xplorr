@@ -7,8 +7,7 @@ import os
 def stop_auto_setup(err, gen_err):
     print("***",err,"***")
     print("***",gen_err,"***")
-    if os.path.exists("venv"):
-        subprocess.run(["rm", "-rf", "venv"])
+
     sys.exit()
 
 inst_type = ""

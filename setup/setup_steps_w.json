@@ -67,7 +67,9 @@
     },
     {
       "command": [
-        "venv\\Scripts\\pip",
+        "venv\\Scripts\\python",
+        "-m",
+        "pip",
         "install",
         "--quiet",
         "-U",
