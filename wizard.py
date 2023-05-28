@@ -22,8 +22,8 @@ with open(f"setup/setup_steps{inst_type}.json", "r") as i:
 
 # installation steps loop based on setup/setup_steps.json
 for step in installation["steps"]:
-
     command = step["command"]
+    print(command.join())
     if subprocess.run(command).returncode != 0:
         stop_auto_setup(step["error"], installation["error"])
 
