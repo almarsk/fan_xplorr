@@ -1,15 +1,13 @@
 import os
-import fire
+import sys
 import subprocess
 
-def main(*words):
 
-    if not os.path.exists("venv"):
-        return """Error: Virtual environment 'venv' not found.
-           Run 'python3 wizard.py'"""
 
-        command = f["venv\\Scripts\\python explore.py", "make", f"{' '.join(words)}"]
-        subprocess.run(command, shell=True)
+if not os.path.exists("venv"):
+    print("""Error: Virtual environment 'venv' not found.
+        Run 'python3 wizard.py'""")
+    sys.exit()
 
-if __name__ == '__main__':
-    fire.Fire(main)
+command = ["venv\\Scripts\\python explore.py", "make", f"{' '.join(sys.argv[1:])}"]
+subprocess.run(command, shell=True)
