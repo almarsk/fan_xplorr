@@ -8,7 +8,7 @@ def main(*words):
         return """Error: Virtual environment 'venv' not found.
            Run 'python3 wizard.py'"""
 
-        command = f"venv\\Scripts\\activate && python explore.py make {' '.join(words)} && deactivate"
+        command = f["venv\\Scripts\\python explore.py", "make", f"{' '.join(words)}"]
         subprocess.run(command, shell=True)
 
 if __name__ == '__main__':

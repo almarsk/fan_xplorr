@@ -9,7 +9,7 @@ def main(word):
            Create file config.json with these contents:
                {"filename": "nodes"}"""
 
-        command = f"venv\\Scripts\\activate && python explore.py name {word} && deactivate"
+        command =["venv\\Scripts\\python", "explore.py", "name", f"{word}"]
         subprocess.run(command, shell=True)
 
 if __name__ == '__main__':
