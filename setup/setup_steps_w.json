@@ -3,14 +3,14 @@
     {
       "command": [
         "del",
-        "xplor"
+        ".\\xplor"
       ],
       "error": ""
     },
     {
       "command": [
         "move",
-        "setup/xplor_w.py",
+        "setup\\xplor_w.py",
         "xplor"
       ],
       "error": ""
@@ -25,7 +25,7 @@
     {
       "command": [
         "move",
-        "setup/rnm_w.py",
+        "setup\\rnm_w.py",
         "rnm"
       ],
       "error": ""
