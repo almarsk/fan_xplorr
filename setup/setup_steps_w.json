@@ -34,7 +34,7 @@
     },
     {
       "command": [
-        "venv/bin/pip",
+        "venv\\Scripts\\pip",
         "install",
         "--quiet",
         "-U",
@@ -44,11 +44,11 @@
     },
     {
       "command": [
-        "venv/bin/pip",
+        "venv\\Scripts\\pip",
         "install",
         "--quiet",
         "-r",
-        "setup/requirements.txt"
+        "setup\\requirements.txt"
       ],
       "error": "downloading packages failed"
     },
@@ -61,15 +61,23 @@
     },
     {
       "command": [
-        "venv/bin/python",
-        "setup/import_data.py"
+        "setx",
+        "PYTHONPATH",
+        ".\\venv\\Lib\\site-packages"
+      ],
+      "error": ""
+    },
+    {
+      "command": [
+        "venv\\Scripts\\python",
+        "setup\\import_data.py"
       ],
       "error": "downloading data failed"
     },
     {
       "command": [
-        "venv/bin/python",
-        "setup/process_data_just_words.py"
+        "venv\\Scripts\\python",
+        "setup\\process_data_just_words.py"
       ],
       "error": "processing data failed"
     }
