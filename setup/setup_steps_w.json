@@ -5,7 +5,7 @@
         "icacls",
         "rnm",
         "/grant",
-        "Everyone:(RX)"
+        "username:(RX)"
       ],
       "error": "the script name didn't get necessary permission"
     },
@@ -14,7 +14,7 @@
         "icacls",
         "xplor",
         "/grant",
-        "Everyone:(RX)"
+        "username:(RX)"
       ],
       "error": "the script xplor didn't get necessary permission"
     },

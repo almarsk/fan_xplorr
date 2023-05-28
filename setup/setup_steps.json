@@ -18,6 +18,13 @@
     },
     {
       "command": [
+        "echo",
+        "creating virtual environment"
+      ],
+      "error": ""
+    },
+    {
+      "command": [
         "python3",
         "-m",
         "venv",
