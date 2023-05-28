@@ -2,6 +2,8 @@
   "steps": [
     {
       "command": [
+        "cmd",
+        "/c",
         "del",
         "xplor.sh"
       ],
@@ -9,6 +11,8 @@
     },
     {
       "command": [
+        "cmd",
+        "/c",
         "move",
         "setup\\xplor_w.py",
         "xplor.py"
@@ -17,6 +21,8 @@
     },
     {
       "command": [
+        "cmd",
+        "/c",
         "del",
         "rnm.sh"
       ],
@@ -24,6 +30,8 @@
     },
     {
       "command": [
+        "cmd",
+        "/c",
         "move",
         "setup\\rnm_w.py",
         "rnm.py"
@@ -32,6 +40,8 @@
     },
     {
       "command": [
+        "cmd",
+        "/c",
         "echo",
         "creating virtual environment"
       ],
@@ -48,6 +58,8 @@
     },
     {
       "command": [
+        "cmd",
+        "/c",
         "echo",
         "virtual environment created, now downloading packages"
       ],
@@ -75,6 +87,8 @@
     },
     {
       "command": [
+        "cmd",
+        "/c",
         "echo",
         "packages installed, now downloading the data"
       ],
@@ -82,6 +96,8 @@
     },
     {
       "command": [
+        "cmd",
+        "/c",
         "setx",
         "PYTHONPATH",
         ".\\venv\\Lib\\site-packages"
