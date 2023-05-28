@@ -2,14 +2,14 @@
   "steps": [
     {
       "command": [
-        "rm",
+        "del",
         "xplor"
       ],
       "error": ""
     },
     {
       "command": [
-        "mv",
+        "move",
         "setup/xplor_w.py",
         "xplor"
       ],
@@ -17,14 +17,14 @@
     },
     {
       "command": [
-        "rm",
+        "del",
         "rnm"
       ],
       "error": ""
     },
     {
       "command": [
-        "mv",
+        "move",
         "setup/rnm_w.py",
         "rnm"
       ],
