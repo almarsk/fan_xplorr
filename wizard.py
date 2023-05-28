@@ -15,7 +15,7 @@ inst_type = ""
 
 if platform.system() == 'Windows':
     inst_type = "_w"
-if platform.system() != 'Darwin' and platform.system() != 'Linux':
+elif platform.system() != 'Darwin' and platform.system() != 'Linux':
     stop_auto_setup("this autosetup only works on mac os and linux and windows", "consult documentation for manual installation")
 with open(f"setup/setup_steps{inst_type}.json", "r") as i:
     installation = json.load(i)
