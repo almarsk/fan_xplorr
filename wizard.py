@@ -13,7 +13,7 @@ def stop_auto_setup(err, gen_err):
 
 inst_type = ""
 
-if platform.system() == 'Windows':
+if sys.platform.startswith('win'):
     inst_type = "_w"
 elif platform.system() != 'Darwin' and platform.system() != 'Linux':
     stop_auto_setup("this autosetup only works on mac os and linux and windows", "consult documentation for manual installation")
