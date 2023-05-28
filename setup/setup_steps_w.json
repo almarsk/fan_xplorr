@@ -2,17 +2,19 @@
   "steps": [
     {
       "command": [
-        "chmod",
-        "+x",
-        "rnm"
+        "icacls",
+        "rnm",
+        "/grant",
+        "Everyone:(RX)"
       ],
       "error": "the script name didn't get necessary permission"
     },
     {
       "command": [
-        "chmod",
-        "+x",
-        "xplor"
+        "icacls",
+        "xplor",
+        "/grant",
+        "Everyone:(RX)"
       ],
       "error": "the script xplor didn't get necessary permission"
     },
