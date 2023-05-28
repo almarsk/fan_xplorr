@@ -5,7 +5,7 @@
         "cmd",
         "/c",
         "del",
-        "xplor.sh"
+        "xplor"
       ],
       "error": ""
     },
@@ -15,7 +15,7 @@
         "/c",
         "move",
         "setup\\xplor_w.py",
-        "xplor.py"
+        "xplor"
       ],
       "error": ""
     },
@@ -24,7 +24,7 @@
         "cmd",
         "/c",
         "del",
-        "rnm.sh"
+        "rnm"
       ],
       "error": ""
     },
@@ -34,7 +34,7 @@
         "/c",
         "move",
         "setup\\rnm_w.py",
-        "rnm.py"
+        "rnm"
       ],
       "error": ""
     },
