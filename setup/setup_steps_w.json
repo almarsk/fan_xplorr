@@ -3,7 +3,7 @@
     {
       "command": [
         "del",
-        ".\\xplor"
+        "xplor.sh"
       ],
       "error": ""
     },
@@ -11,14 +11,14 @@
       "command": [
         "move",
         "setup\\xplor_w.py",
-        "xplor"
+        "xplor.py"
       ],
       "error": ""
     },
     {
       "command": [
         "del",
-        "rnm"
+        "rnm.sh"
       ],
       "error": ""
     },
@@ -26,7 +26,7 @@
       "command": [
         "move",
         "setup\\rnm_w.py",
-        "rnm"
+        "rnm.py"
       ],
       "error": ""
     },

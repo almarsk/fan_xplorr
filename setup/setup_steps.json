@@ -2,6 +2,22 @@
   "steps": [
     {
       "command": [
+        "mv",
+        "rnm.sh",
+        "rnm"
+      ],
+      "error": "the script name didn't get necessary permission"
+    },
+    {
+      "command": [
+        "mv",
+        "xplor.sh",
+        "xplor"
+      ],
+      "error": "the script name didn't get necessary permission"
+    },
+    {
+      "command": [
         "chmod",
         "+x",
         "rnm"
