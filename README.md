@@ -23,7 +23,7 @@ start exploring on MAC
 ```
 start exploring on WINDOWS
 ```sh
-python3 xplor word of your choice
+xplor.bat word of your choice
 ```
 
 Citation:
