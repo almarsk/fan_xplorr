@@ -20,10 +20,12 @@ python3 wizard.py
 start exploring on MAC
 ```sh
 ./xplor word of your choice
+open graphs/nodes_both.html
 ```
 start exploring on WINDOWS
 ```sh
 xplor.bat word of your choice
+start graphs\nodes_both.html
 ```
 
 Citation:
