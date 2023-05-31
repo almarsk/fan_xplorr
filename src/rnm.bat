@@ -15,9 +15,6 @@ if not exist "venv" (
 
 call venv\Scripts\activate
 
-set "args_string="
-for %%x in (%*) do set "args_string=!args_string! %%x"
-
-python src\explore.py name %args_string%
+python src\explore.py name %~1
 
 call venv\Scripts\deactivate
