@@ -9,7 +9,7 @@ if not exist "config.json" (
 
 if not exist "venv" (
     echo Error: Virtual environment 'venv' not found.
-    echo Run 'python wizard.py'
+    echo Run 'python3 wizard.py'
     exit /b 1
 )
 
