@@ -14,6 +14,9 @@ inst_type = ""
 
 if sys.platform.startswith('win'):
     inst_type = "_w"
+    if sys.version_info.major < 3:
+        stop_auto_setup("this autosetup only works with python3 and higher", "download latest python version")
+
 
 elif platform.system() != 'Darwin' and platform.system() != 'Linux':
     stop_auto_setup("this autosetup only works on mac os and linux and windows", "consult documentation for manual installation")
