@@ -17,6 +17,10 @@ run the installer
 ```sh
 python3 wizard.py
 ```
+or 
+```sh
+python wizard.py
+```
 start exploring on MAC
 ```sh
 ./xplor word of your choice
