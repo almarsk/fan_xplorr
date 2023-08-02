@@ -25,8 +25,7 @@ def filename(new_name=""):
         j.seek(0)
         j.truncate(0)
         json.dump(config, j)
-        print("To change the destination filename, run '.rnm desired_name'.")
-        print("Current filenames:")
+        print("Current filename:")
         return config['filename']
 
 
