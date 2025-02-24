@@ -35,3 +35,6 @@ start graphs\nodes_both.html
 Citation:
 
 Nelson, D. L., McEvoy, C. L., & Schreiber, T. A. (1998). The University of South Florida word association, rhyme, and word fragment norms. [http://www.usf.edu/FreeAssociation/](http://w3.usf.edu/FreeAssociation/)
+
+This tool has been reported on here:
+[https://linguisticapragensia.ff.cuni.cz/magazin/2024-34-2/](https://linguisticapragensia.ff.cuni.cz/magazin/2024-34-2/)
